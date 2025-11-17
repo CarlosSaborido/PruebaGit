@@ -21,17 +21,7 @@ public class Ejercicio9 {
         }while(seleccion != 0 );
         
     }
-    public static void menu()
-     {
-         System.out.print("\t\tMenu rapidito");
-         System.out.print("\n\t1.-Cargar datos del array(Aleatorio)");
-         System.out.print("\n\t2.-Cargar datos del array(Manual)");
-         System.out.print("\n\t3.-Mostrar el array");
-         System.out.print("\n\t4.-Poner los numeros primos al principio y mostar el array");
-         System.out.print("\n0.-Salir");
-         System.out.print("\n\tEliga su opcion: ");
-         
-     }
+     
     public static void seleccionMenu(int _seleccion, int [] num)
     {
         
