@@ -73,22 +73,34 @@ public class Ejercicio12 {
         String [] auxiliar = new String [_palabras.length];
         String [] aux2 = new String [_palabras.length];
         int contadorColores = 0, contadorRandom =0;
+        boolean encontrado;
         
-        for (int i = 0; i < _palabras.length; i++)
+        for (int i = 0; i < _palabras.length ; i++)
         {
-            for (int j = 0; j < colores.length; j++) 
+            encontrado = true;
+            
+            for (int j = 0; j < colores.length && !encontrado; j++) 
             {
                 if(_palabras[i] == colores[j])
                 {
-                    auxiliar[i] = _palabras[i];
-                    contadorColores++;
+                    encontrado = false ;
                 }
-                else                   
-                {
-                    aux2[i] = _palabras[i];
-                    contadorRandom++;
-                }
+                
             }
+            encontrado = true ;
+            if (!encontrado)
+            {
+                auxiliar[contadorColores] = _palabras[i];
+                contadorColores++;
+            }
+            else
+            {
+                aux2[contadorRandom] = _palabras[i];
+                contadorRandom++;
+                        
+            }
+                
+            
         }
         
         contadorRandom=0;
