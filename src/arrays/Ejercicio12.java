@@ -77,18 +77,20 @@ public class Ejercicio12 {
         
         for (int i = 0; i < _palabras.length ; i++)
         {
-            encontrado = true;
+            encontrado = false;
             
             for (int j = 0; j < colores.length && !encontrado; j++) 
             {
-                if(_palabras[i] == colores[j])
+                if(_palabras[i].equals(colores[j]))
                 {
-                    encontrado = false ;
+                    encontrado = true ;
+                    break;
                 }
                 
             }
-            encontrado = true ;
-            if (!encontrado)
+            
+            
+            if (encontrado)
             {
                 auxiliar[contadorColores] = _palabras[i];
                 contadorColores++;
@@ -102,7 +104,18 @@ public class Ejercicio12 {
                 
             
         }
-        
+        /*
+        System.out.println("nexxxx");
+        for (int i = 0; i < contadorRandom; i++)
+        {
+            System.out.print(" "+aux2[i]);    
+        }
+        System.out.println("nextt");
+        for (int i = 0; i < contadorColores; i++)
+        {
+            System.out.print(" "+ auxiliar[i]);    
+        }
+        */
         contadorRandom=0;
         
         for (int i = contadorColores; i < _palabras.length ; i++)
@@ -115,5 +128,10 @@ public class Ejercicio12 {
         {
           _palabras[i] = auxiliar[i];   
         }
+        for (int i = 0; i < _palabras.length; i++) 
+        {
+           System.out.print(_palabras[i]+ ((i) < _palabras.length-1? ", ": "")); 
+        }
+        
     }
 }

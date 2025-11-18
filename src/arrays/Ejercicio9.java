@@ -21,6 +21,16 @@ public class Ejercicio9 {
         }while(seleccion != 0 );
         
     }
+    public static void menu()
+    {
+        System.out.print("--Menu--");
+        System.out.print("\n\t1.-Cargar el array(Aleatorio)");
+        System.out.print("\n\t2.-Cargar el array(Manual)");
+        System.out.print("\n\t3.-Mostrar");
+        System.out.print("\n\t4.-Ordenar por primos");
+        System.out.print("\n0.-Salir");
+        System.out.print("\nOpcion:");
+    }
      
     public static void seleccionMenu(int _seleccion, int [] num)
     {
